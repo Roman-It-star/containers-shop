@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Продажа контейнеров – Заказ</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo">Container<span>Market</span></div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="order.html">Заказ</a></li>
+        <li><a href="scheme.html">Схема склада</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h1>Оформление заявки</h1>
+    <p>Оставьте контакты, и менеджер подберёт контейнер под ваши задачи.</p>
+
+    <form id="order-form" class="form-card">
+      <div class="form-row">
+        <label for="customerName">Имя *</label>
+        <input type="text" id="customerName" name="customerName" required placeholder="Ваше имя">
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Телефон *</label>
+        <input type="tel" id="phone" name="phone" required
+               placeholder="+7 (___) ___-__-__"
+               pattern="^\+?[0-9\-\s\(\)]{7,}$">
+      </div>
+
+      <div class="form-row">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="email" required placeholder="name@example.com">
+      </div>
+
+      <div class="form-row">
+        <label for="containerType">Тип контейнера *</label>
+        <select id="containerType" name="containerType" required>
+          <option value="">Выберите вариант</option>
+          <option value="20dc">20ft Стандарт (DC)</option>
+          <option value="40hc">40ft High Cube (HC)</option>
+          <option value="40rf">Рефконтейнер 40ft</option>
+          <option value="block-office">Блок-контейнер офисный</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="quantity">Количество (шт.)</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="50" value="1">
+      </div>
+
+      <div class="form-row">
+        <label for="deliveryDate">Желаемая дата доставки</label>
+        <input type="date" id="deliveryDate" name="deliveryDate">
+      </div>
+
+      <div class="form-row">
+        <label for="urgency">Срочность (0 – не срочно, 10 – очень срочно)</label>
+        <input type="range" id="urgency" name="urgency" min="0" max="10" value="5">
+      </div>
+
+      <div class="form-row">
+        <label for="city">Город поставки</label>
+        <input list="cities" id="city" name="city" placeholder="Начните вводить город">
+        <datalist id="cities">
+          <option value="Москва"></option>
+          <option value="Санкт-Петербург"></option>
+          <option value="Екатеринбург"></option>
+          <option value="Новосибирск"></option>
+        </datalist>
+      </div>
+
+      <div class="form-row">
+        <label for="comment">Комментарий к заявке</label>
+        <textarea id="comment" name="comment" rows="4"
+                  placeholder="Опишите назначение контейнера, условия размещения и т.п."></textarea>
+      </div>
+
+      <button type="submit" class="btn">Отправить заявку</button>
+
+      <p class="storage-note">
+        Данные (имя, телефон, e-mail и выбранный тип контейнера) будут сохранены в вашем браузере с помощью
+        <strong>WebStorage (localStorage)</strong>, чтобы при повторном обращении не вводить их заново.
+      </p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2025 Верещагин Роман</div>
+    <div>Используются HTML5 формы и WebStorage</div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
