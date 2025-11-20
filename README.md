@@ -1,2 +1,16 @@
-# containers-shop
-containers-shop
+# ContainerMarket — сайт по продаже контейнеров
+
+Учебный проект по HTML5/CSS3/JavaScript на тему **«Продажа контейнеров»**.  
+Сайт разработан для зачётного задания и демонстрирует использование новых возможностей HTML5, CSS3 и Web Storage в соответствии с пособием по курсу.
+
+## Структура проекта
+containers-shop/
+├─ index.html       — главная страница (описание компании, преимущества)
+├─ catalog.html     — каталог контейнеров
+├─ order.html       — форма заказа контейнера + WebStorage
+├─ scheme.html      — схема размещения контейнеров (SVG)
+├─ contacts.html    — контакты
+├─ css/
+│   └─ styles.css   — общие стили сайта (CSS3)
+└─ js/
+    └─ main.js      — скрипты формы и WebStorage
